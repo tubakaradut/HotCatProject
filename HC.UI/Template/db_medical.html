@@ -1,0 +1,1077 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Codebase - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Codebase - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Codebase - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Codebase">
+    <meta property="og:description" content="Codebase - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+
+    <!-- Fonts and Codebase framework -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap">
+    <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+    <!-- END Stylesheets -->
+  </head>
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Codebase.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-modern'                        Modern Header style
+        'page-header-dark'                          Dark themed Header (works only with classic Header style)
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'        Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="sidebar-o enable-page-overlay side-scroll page-header-fixed page-header-modern main-content-boxed">
+
+      <!-- Side Overlay-->
+      <aside id="side-overlay">
+        <!-- Side Header -->
+        <div class="content-header">
+          <!-- User Avatar -->
+          <a class="img-link me-2" href="be_pages_generic_profile.html">
+            <img class="img-avatar img-avatar32" src="assets/media/avatars/avatar1.jpg" alt="">
+          </a>
+          <!-- END User Avatar -->
+
+          <!-- User Info -->
+          <a class="link-fx text-body-color-dark fw-semibold fs-sm" href="be_pages_generic_profile.html">
+            Dr. Stone
+          </a>
+          <!-- END User Info -->
+
+          <!-- Close Side Overlay -->
+          <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+          <button type="button" class="btn btn-sm btn-alt-danger ms-auto" data-toggle="layout" data-action="side_overlay_close">
+            <i class="fa fa-fw fa-times"></i>
+          </button>
+          <!-- END Close Side Overlay -->
+        </div>
+        <!-- END Side Header -->
+
+        <!-- Emergency Notification -->
+        <div class="content-side content-side-full bg-danger-light text-center">
+          <i class="fa fa-exclamation-triangle fa-2x text-danger animated swing infinite"></i>
+          <p class="fs-5 fw-bold text-danger mt-2 mb-0">
+            There is an emergency, please proceed to surgery immediately!
+          </p>
+        </div>
+        <!-- END Emergency Notification -->
+
+        <!-- Side Content -->
+        <div class="content-side">
+          <!-- Mini Stats -->
+          <div class="block pull-x">
+            <div class="block-content block-content-full block-content-sm bg-body-light">
+              <div class="row text-center">
+                <div class="col-6">
+                  <div class="fs-sm fw-semibold text-uppercase text-muted">Patients</div>
+                  <a class="link-fx fw-semibold fs-4" href="javascript:void(0)">5</a>
+                </div>
+                <div class="col-6">
+                  <div class="fs-sm fw-semibold text-uppercase text-muted">Appointments</div>
+                  <a class="link-fx fw-semibold fs-4" href="javascript:void(0)">6</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Mini Stats -->
+
+          <!-- Notifications -->
+          <div class="block pull-x">
+            <div class="block-header bg-body-light">
+              <h3 class="block-title">Recent Notifications</h3>
+              <div class="block-options">
+                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                  <i class="si si-refresh"></i>
+                </button>
+              </div>
+            </div>
+            <div class="block-content block-content-full">
+              <ul class="list list-activity">
+                <li>
+                  <i class="fa fa-exclamation-triangle text-danger"></i>
+                  <div class="fs-sm fw-semibold">There is an emergency!</div>
+                  <div class="fs-sm">
+                    <a class="fw-semibold text-danger" href="javascript:void(0)">Event Details</a>
+                  </div>
+                  <div class="fs-xs text-muted">just now</div>
+                </li>
+                <li>
+                  <i class="fa fa-check text-success"></i>
+                  <div class="fs-sm fw-semibold">New patient was added successfully</div>
+                  <div class="fs-sm">
+                    <a class="fw-semibold text-success" href="javascript:void(0)">Megan Fuller</a>
+                  </div>
+                  <div class="fs-xs text-muted">15 min ago</div>
+                </li>
+                <li>
+                  <i class="fa fa-pencil-alt text-info"></i>
+                  <div class="fs-sm fw-semibold">You edited a file</div>
+                  <div class="fs-sm">
+                    <a class="fw-semibold text-info" href="javascript:void(0)">
+                      <i class="fa fa-file-alt"></i> Prescription#2.doc
+                    </a>
+                  </div>
+                  <div class="fs-xs text-muted">1 day ago</div>
+                </li>
+                <li>
+                  <i class="fab fa-paypal text-primary"></i>
+                  <div class="fs-sm fw-semibold">New payment received!</div>
+                  <div class="fs-sm">
+                    From <a class="fw-semibold" href="javascript:void(0)">Brian Cruz</a>
+                  </div>
+                  <div class="fs-xs text-muted">1 day ago</div>
+                </li>
+                <li>
+                  <i class="fa fa-check text-success"></i>
+                  <div class="fs-sm fw-semibold">New appointment was scheduled successfully</div>
+                  <div class="fs-sm">
+                    Tomorrow with <a class="fw-semibold text-success" href="javascript:void(0)">Alice Moore</a>
+                  </div>
+                  <div class="fs-xs text-muted">2 days ago</div>
+                </li>
+              </ul>
+              <a class="btn btn-alt-secondary w-100 mb-1" href="javascript:void(0)">
+                Load more..
+              </a>
+              <a class="btn btn-alt-primary w-100" href="javascript:void(0)">
+                <i class="fa fa-flag opacity-50 me-1"></i>
+                View All Notifications
+              </a>
+            </div>
+          </div>
+          <!-- END Notifications -->
+        </div>
+        <!-- END Side Content -->
+      </aside>
+      <!-- END Side Overlay -->
+
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <!-- Sidebar Content -->
+        <div class="sidebar-content">
+          <!-- Side Header -->
+          <div class="content-header justify-content-lg-center">
+            <!-- Logo -->
+            <div>
+              <span class="smini-visible fw-bold tracking-wide fs-lg">
+                c<span class="text-primary">b</span>
+              </span>
+              <a class="link-fx fw-bold tracking-wide mx-auto" href="index.html">
+                <span class="smini-hidden">
+                  <i class="fa fa-fire text-primary"></i>
+                  <span class="fs-4 text-dual">code</span><span class="fs-4 text-primary">base</span>
+                </span>
+              </a>
+            </div>
+            <!-- END Logo -->
+
+            <!-- Options -->
+            <div>
+              <!-- Close Sidebar, Visible only on mobile screens -->
+              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+              <button type="button" class="btn btn-sm btn-alt-danger d-lg-none" data-toggle="layout" data-action="sidebar_close">
+                <i class="fa fa-fw fa-times"></i>
+              </button>
+              <!-- END Close Sidebar -->
+            </div>
+            <!-- END Options -->
+          </div>
+          <!-- END Side Header -->
+
+          <!-- Sidebar Scrolling -->
+          <div class="js-sidebar-scroll">
+            <!-- Side User -->
+            <div class="content-side content-side-user px-0 py-0">
+              <!-- Visible only in mini mode -->
+              <div class="smini-visible-block animated fadeIn px-2">
+                <img class="img-avatar img-avatar32" src="assets/media/avatars/avatar11.jpg" alt="">
+              </div>
+              <!-- END Visible only in mini mode -->
+
+              <!-- Visible only in normal mode -->
+              <div class="smini-hidden text-center mx-auto">
+                <a class="img-link" href="be_pages_generic_profile.html">
+                  <img class="img-avatar" src="assets/media/avatars/avatar11.jpg" alt="">
+                </a>
+                <ul class="list-inline mt-3 mb-0">
+                  <li class="list-inline-item">
+                    <a class="link-fx text-dual fs-sm fw-semibold text-uppercase" href="be_pages_generic_profile.html">Dr. Stone</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                    <a class="link-fx text-dual" data-toggle="layout" data-action="dark_mode_toggle" href="javascript:void(0)">
+                      <i class="fa fa-burn"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="link-fx text-dual" href="op_auth_signin.html">
+                      <i class="fa fa-sign-out-alt"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- END Visible only in normal mode -->
+            </div>
+            <!-- END Side User -->
+
+            <!-- Side Navigation -->
+            <div class="content-side content-side-full">
+              <ul class="nav-main">
+                <li class="nav-main-item">
+                  <a class="nav-main-link active" href="db_medical.html">
+                    <i class="nav-main-link-icon far fa-hospital"></i>
+                    <span class="nav-main-link-name">Overview</span>
+                  </a>
+                </li>
+                <li class="nav-main-heading">Manage</li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon far fa-user-circle"></i>
+                    <span class="nav-main-link-name">Patients</span>
+                  </a>
+                  <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Current</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Manage</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Add Patient</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon fa fa-calendar-alt"></i>
+                    <span class="nav-main-link-name">Appointments</span>
+                  </a>
+                  <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Active</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Manage</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Add Appointment</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon fab fa-paypal"></i>
+                    <span class="nav-main-link-name">Payments</span>
+                  </a>
+                  <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Pending</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Manage</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Add Payment</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-main-heading">Settings</li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-pencil-alt"></i>
+                    <span class="nav-main-link-name">Profile</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-lock"></i>
+                    <span class="nav-main-link-name">Security</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-flag"></i>
+                    <span class="nav-main-link-name">Notifications</span>
+                  </a>
+                </li>
+                <li class="nav-main-heading">Help</li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-book"></i>
+                    <span class="nav-main-link-name">Knowledge Base</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-comments"></i>
+                    <span class="nav-main-link-name">Hospital Forum</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- END Side Navigation -->
+          </div>
+          <!-- END Sidebar Scrolling -->
+        </div>
+        <!-- Sidebar Content -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div class="d-flex align-items-center space-x-2">
+            <!-- Toggle Sidebar -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="sidebar_toggle">
+              <i class="fa fa-fw fa-bars"></i>
+            </button>
+            <!-- END Toggle Sidebar -->
+
+            <!-- Full Search -->
+            <form class="d-none d-sm-inline-block" action="db_medical.html" method="POST" onsubmit="return false;">
+              <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="Search..">
+                <span class="input-group-text">
+                  <i class="fa fa-search"></i>
+                </span>
+              </div>
+            </form>
+            <!-- END Full Search -->
+
+            <!-- Open Search Section -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-sm btn-alt-secondary d-sm-none" data-toggle="layout" data-action="header_search_on">
+              <i class="fa fa-fw fa-search"></i>
+            </button>
+            <!-- END Open Search Section -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div class="space-x-1">
+            <!-- User Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-sm btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user-md d-sm-none"></i>
+                <span class="d-none d-sm-inline-block fw-semibold">Dr. Stone</span>
+                <i class="fa fa-angle-down opacity-50 ms-1"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="page-header-user-dropdown">
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                  <span>Patients</span>
+                  <i class="far fa-fw fa-user-circle opacity-50 ms-1"></i>
+                </a>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                  <span>Appointments</span>
+                  <i class="fa fa-fw fa-calendar-alt opacity-50 ms-1"></i>
+                </a>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                  <span>Payments</span>
+                  <i class="fab fa-fw fa-paypal opacity-50 ms-1"></i>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                  <span>Profile</span>
+                  <i class="fa fa-fw fa-pencil-alt opacity-50 me-1"></i>
+                </a>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                  <span>Settings</span>
+                  <i class="fa fa-fw fa-cog opacity-50 ms-1"></i>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                  <span>Sign Out</span>
+                  <i class="fa fa-fw fa-unlock-alt opacity-50 ms-1"></i>
+                </a>
+              </div>
+            </div>
+            <!-- END User Dropdown -->
+
+            <!-- Toggle Side Overlay -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="side_overlay_toggle">
+              <span class="badge bg-danger me-1 animated swing infinite">
+                <i class="fa fa-exclamation-triangle"></i>
+              </span>
+              <i class="fa fa-fw fa-flag"></i>
+            </button>
+            <!-- END Toggle Side Overlay -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-body-extra-light">
+          <div class="content-header">
+            <form class="w-100" action="be_pages_generic_search.html" method="POST">
+              <div class="input-group">
+                <!-- Close Search Section -->
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times"></i>
+                </button>
+                <!-- END Close Search Section -->
+                <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                <button type="submit" class="btn btn-secondary">
+                  <i class="fa fa-fw fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <div id="page-header-loader" class="overlay-header bg-primary">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="far fa-sun fa-spin text-white"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Quick Navigation -->
+        <div class="bg-body-dark">
+          <div class="content">
+            <div class="row">
+              <div class="col-6 col-md-4 col-xl-2">
+                <a class="block block-rounded text-center" href="javascript:void(0)">
+                  <div class="block-content px-2">
+                    <p class="mt-1 mb-3">
+                      <i class="far fa-envelope text-gray fa-2x"></i>
+                    </p>
+                    <p class="fw-semibold fs-sm text-uppercase">Inbox</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 col-xl-2">
+                <a class="block block-rounded text-center" href="javascript:void(0)">
+                  <div class="block-content px-2">
+                    <p class="mt-1 mb-3">
+                      <i class="fa fa-pencil-alt text-gray fa-2x"></i>
+                    </p>
+                    <p class="fw-semibold fs-sm text-uppercase">Profile</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 col-xl-2">
+                <a class="block block-rounded text-center" href="javascript:void(0)">
+                  <div class="block-content px-2">
+                    <p class="mt-1 mb-3">
+                      <i class="fa fa-wrench text-gray fa-2x"></i>
+                    </p>
+                    <p class="fw-semibold fs-sm text-uppercase">Settings</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 col-xl-2">
+                <a class="block block-rounded text-center" href="javascript:void(0)">
+                  <div class="block-content px-2">
+                    <p class="mt-1 mb-3">
+                      <i class="far fa-plus-square text-gray fa-2x"></i>
+                    </p>
+                    <p class="fw-semibold fs-sm text-uppercase">Add Patient</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 col-xl-2">
+                <a class="block block-rounded text-center" href="javascript:void(0)">
+                  <div class="block-content px-2">
+                    <p class="mt-1 mb-3">
+                      <i class="far fa-plus-square text-gray fa-2x"></i>
+                    </p>
+                    <p class="fw-semibold fs-sm text-uppercase">Add Event</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 col-xl-2">
+                <a class="block block-rounded text-center" href="javascript:void(0)">
+                  <div class="block-content px-2">
+                    <p class="mt-1 mb-3">
+                      <i class="far fa-plus-square text-gray fa-2x"></i>
+                    </p>
+                    <p class="fw-semibold fs-sm text-uppercase">Add Payment</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END Quick Navigation -->
+
+        <!-- Page Content -->
+        <div class="content">
+          <!-- Overview -->
+          <div class="row">
+            <div class="col-md-4">
+              <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="mb-3">
+                      <i class="far fa-user-circle fa-3x text-corporate"></i>
+                    </div>
+                    <div class="fs-4 fw-semibold mb-1">5 Patients</div>
+                    <div class="fw-medium text-muted">2 were added today!</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="mb-3">
+                      <i class="fa fa-calendar-alt fa-3x text-elegance"></i>
+                    </div>
+                    <div class="fs-4 fw-semibold mb-1">6 Appointments</div>
+                    <div class="fw-medium text-muted">4 are scheduled for today!</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="mb-3">
+                      <i class="fab fa-paypal fa-3x text-primary"></i>
+                    </div>
+                    <div class="fs-4 fw-semibold mb-1">2 Payments</div>
+                    <div class="fw-medium text-muted">Pending for tomorrow.</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- END Overview -->
+
+          <!-- Patients -->
+          <div class="block block-rounded">
+            <div class="block-header block-header-default">
+              <h3 class="block-title">Current Patients</h3>
+              <div class="block-options">
+                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                  <i class="si si-refresh"></i>
+                </button>
+                <button type="button" class="btn-block-option">
+                  <i class="si si-wrench"></i>
+                </button>
+              </div>
+            </div>
+            <div class="block-content block-content-full">
+              <div class="table-responsive">
+                <table class="table table-borderless table-hover table-striped table-vcenter mb-0">
+                  <thead>
+                    <tr>
+                      <th style="width: 100px;">ID</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Condition</th>
+                      <th>Actions</th>
+                      <th>Added</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">54874</a>
+                      </td>
+                      <td>
+                        <strong>Roy</strong>
+                      </td>
+                      <td>
+                        <strong>Obrien</strong>
+                      </td>
+                      <td>
+                        <span class="badge bg-success">Normal</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                          <i class="fa fa-heartbeat text-danger me-1"></i> Medical History
+                        </a>
+                      </td>
+                      <td>
+                        <span class="text-muted">today</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">54873</a>
+                      </td>
+                      <td>
+                        <strong>Bobby</strong>
+                      </td>
+                      <td>
+                        <strong>Lane</strong>
+                      </td>
+                      <td>
+                        <span class="badge bg-info">Stable</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                          <i class="fa fa-heartbeat text-danger me-1"></i> Medical History
+                        </a>
+                      </td>
+                      <td>
+                        <span class="text-muted">today</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">54872</a>
+                      </td>
+                      <td>
+                        <strong>Amanda</strong>
+                      </td>
+                      <td>
+                        <strong>Ray</strong>
+                      </td>
+                      <td>
+                        <span class="badge bg-danger">Critical</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                          <i class="fa fa-heartbeat text-danger me-1"></i> Medical History
+                        </a>
+                      </td>
+                      <td>
+                        <span class="text-muted">3 days ago</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">54871</a>
+                      </td>
+                      <td>
+                        <strong>Rose</strong>
+                      </td>
+                      <td>
+                        <strong>Alvarado</strong>
+                      </td>
+                      <td>
+                        <span class="badge bg-warning">Pending..</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                          <i class="fa fa-heartbeat text-danger me-1"></i> Medical History
+                        </a>
+                      </td>
+                      <td>
+                        <span class="text-muted">4 days ago</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">54870</a>
+                      </td>
+                      <td>
+                        <strong>Jose</strong>
+                      </td>
+                      <td>
+                        <strong>Fowler</strong>
+                      </td>
+                      <td>
+                        <span class="badge bg-info">Stable</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                          <i class="fa fa-heartbeat text-danger me-1"></i> Medical History
+                        </a>
+                      </td>
+                      <td>
+                        <span class="text-muted">5 days ago</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- END Patients -->
+
+          <!-- Appointments -->
+          <div class="block block-rounded">
+            <div class="block-header block-header-default">
+              <h3 class="block-title">Appointments</h3>
+              <div class="block-options">
+                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                  <i class="si si-refresh"></i>
+                </button>
+                <button type="button" class="btn-block-option">
+                  <i class="si si-wrench"></i>
+                </button>
+              </div>
+            </div>
+            <div class="block-content block-content-full">
+              <div class="table-responsive">
+                <table class="table table-borderless table-hover table-striped table-vcenter mb-0">
+                  <thead>
+                    <tr>
+                      <th style="width: 100px;">ID</th>
+                      <th>Patient</th>
+                      <th>First time?</th>
+                      <th>Date</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">36986</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">Justin Hunt</a>
+                      </td>
+                      <td>
+                        <i class="fa fa-check-circle text-success"></i>
+                      </td>
+                      <td>
+                        Today at 10:00
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-sync text-primary me-1"></i> Reschedule
+                        </a>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-times text-danger me-1"></i> Cancel
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">36985</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">Sara Fields</a>
+                      </td>
+                      <td>
+                        <i class="fa fa-check-circle text-success"></i>
+                      </td>
+                      <td>
+                        Today at 12:00
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-sync text-primary me-1"></i> Reschedule
+                        </a>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-times text-danger me-1"></i> Cancel
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">36984</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">Marie Duncan</a>
+                      </td>
+                      <td>
+                        <i class="fa fa-check-circle text-success"></i>
+                      </td>
+                      <td>
+                        Today at 14:00
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-sync text-primary me-1"></i> Reschedule
+                        </a>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-times text-danger me-1"></i> Cancel
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">36983</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">Judy Ford</a>
+                      </td>
+                      <td>
+                        <i class="fa fa-times-circle text-danger"></i>
+                      </td>
+                      <td>
+                        Today at 16:00
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-sync text-primary me-1"></i> Reschedule
+                        </a>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-times text-danger me-1"></i> Cancel
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">36982</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">Andrea Gardner</a>
+                      </td>
+                      <td>
+                        <i class="fa fa-check-circle text-success"></i>
+                      </td>
+                      <td>
+                        Tomorrow at 08:00
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-sync text-primary me-1"></i> Reschedule
+                        </a>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-times text-danger me-1"></i> Cancel
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">36981</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">Jose Wagner</a>
+                      </td>
+                      <td>
+                        <i class="fa fa-times-circle text-danger"></i>
+                      </td>
+                      <td>
+                        Tomorrow at 10:00
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-sync text-primary me-1"></i> Reschedule
+                        </a>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-times text-danger me-1"></i> Cancel
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- END Appointments -->
+
+          <!-- Payments -->
+          <div class="block block-rounded">
+            <div class="block-header block-header-default">
+              <h3 class="block-title">Open Payments</h3>
+              <div class="block-options">
+                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                  <i class="si si-refresh"></i>
+                </button>
+                <button type="button" class="btn-block-option">
+                  <i class="si si-wrench"></i>
+                </button>
+              </div>
+            </div>
+            <div class="block-content block-content-full">
+              <div class="table-responsive">
+                <table class="table table-borderless table-hover table-striped table-vcenter mb-0">
+                  <thead>
+                    <tr>
+                      <th style="width: 100px;">ID</th>
+                      <th>Patient</th>
+                      <th>Invoice</th>
+                      <th>Due</th>
+                      <th>Actions</th>
+                      <th class="text-end">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">158214</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">Betty Kelley</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">
+                          INV_158214.pdf
+                        </a>
+                      </td>
+                      <td>
+                        <span class="badge bg-primary">tomorrow</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-pencil-alt text-primary me-1"></i> Edit
+                        </a>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-times text-danger me-1"></i> Cancel
+                        </a>
+                      </td>
+                      <td class="text-end">
+                        $3.500,00
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a class="fw-semibold" href="javascript:void(0)">158213</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">Jose Parker</a>
+                      </td>
+                      <td>
+                        <a href="javascript:void(0)">
+                          INV_158213.pdf
+                        </a>
+                      </td>
+                      <td>
+                        <span class="badge bg-primary">tomorrow</span>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-pencil-alt text-primary me-1"></i> Edit
+                        </a>
+                        <a class="btn btn-sm btn-alt-secondary m-1" href="javascript:void(0)">
+                          <i class="fa fa-times text-danger me-1"></i> Cancel
+                        </a>
+                      </td>
+                      <td class="text-end">
+                        $1.280,00
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" class="text-end">
+                        <strong class="text-uppercase">Total Due</strong>
+                      </td>
+                      <td class="text-end">
+                        <strong>$4.780,00</strong>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- END Payments -->
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer">
+        <div class="content py-3">
+          <div class="row fs-sm">
+            <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/95j" target="_blank">Codebase 5.1</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </footer>
+  <!-- END Footer -->
+</div>
+<!-- END Page Container -->
+
+<!--
+    Codebase JS
+
+    Core libraries and functionality
+    webpack is putting everything together at assets/_js/main/app.js
+-->
+<script src="assets/js/codebase.app.min.js"></script>
+</body>
+</html>

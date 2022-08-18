@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Sayfalar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <!-- Dynamic Table Full Pagination -->
+    <div class="block block-rounded">
+        <div class="block-header block-header-default">
+            <h3 class="block-title">
+                @ViewBag.Title
+            </h3>
+        </div>
+        <div class="block-content block-content-full">
+            <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Sayfa Adı</th>
+                        <th>Sayfa Yolu</th>
+                        <th>Alt Sayfası var mı?</th>
+                        <th>AnaSayfa mı?</th>
+                        <th>Roller?</th>
+                        <th id="process">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody id="pageTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Dynamic Table Full Pagination -->
+</div>
+
+@section Js{
+
+    <script src="~/Javascripts/Pages/Page/page.js"></script>
+}
+
+
+
+
+

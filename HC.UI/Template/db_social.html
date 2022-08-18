@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Codebase - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Codebase - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Codebase - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Codebase">
+    <meta property="og:description" content="Codebase - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+
+    <!-- Fonts and Codebase framework -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap">
+    <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+    <!-- END Stylesheets -->
+  </head>
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Codebase.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-modern'                        Modern Header style
+        'page-header-dark'                          Dark themed Header (works only with classic Header style)
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'        Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="sidebar-dark side-scroll page-header-fixed main-content-boxed">
+
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <!-- Sidebar Content -->
+        <div class="sidebar-content">
+          <!-- Side Header -->
+          <div class="content-header justify-content-lg-center bg-black-10">
+            <!-- Logo -->
+            <div>
+              <span class="smini-visible fw-bold tracking-wide fs-lg">
+                c<span class="text-primary">b</span>
+              </span>
+              <a class="link-fx fw-bold tracking-wide mx-auto" href="index.html">
+                <span class="smini-hidden">
+                  <i class="fa fa-fire text-primary"></i>
+                  <span class="fs-4 text-dual">code</span><span class="fs-4 text-primary">base</span>
+                </span>
+              </a>
+            </div>
+            <!-- END Logo -->
+
+            <!-- Options -->
+            <div>
+              <!-- Close Sidebar, Visible only on mobile screens -->
+              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+              <button type="button" class="btn btn-sm btn-alt-danger d-lg-none" data-toggle="layout" data-action="sidebar_close">
+                <i class="fa fa-fw fa-times"></i>
+              </button>
+              <!-- END Close Sidebar -->
+            </div>
+            <!-- END Options -->
+          </div>
+          <!-- END Side Header -->
+
+          <!-- Sidebar Scrolling -->
+          <div class="js-sidebar-scroll">
+            <!-- Side Main Navigation -->
+            <div class="content-side content-side-full">
+              <!--
+              Mobile navigation, desktop navigation can be found in #page-header
+
+              If you would like to use the same navigation in both mobiles and desktops, you can use exactly the same markup inside sidebar and header navigation ul lists
+              -->
+              <ul class="nav-main">
+                <li class="nav-main-item">
+                  <a class="nav-main-link active" href="db_social.html">
+                    <i class="nav-main-link-icon fa fa-home"></i>
+                    <span class="nav-main-link-name">Home</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-flag"></i>
+                    <span class="nav-main-link-name">Notifications</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-envelope"></i>
+                    <span class="nav-main-link-name">Messages</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- END Side Main Navigation -->
+          </div>
+          <!-- END Sidebar Scrolling -->
+        </div>
+        <!-- Sidebar Content -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <div class="row g-0 align-items-center w-100">
+            <div class="col">
+              <!-- Toggle Sidebar -->
+              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+              <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+                <i class="fa fa-fw fa-bars"></i>
+              </button>
+              <!-- END Toggle Sidebar -->
+
+              <!-- Header Navigation -->
+              <!-- Desktop Navigation, mobile navigation can be found in #sidebar -->
+              <ul class="nav-main nav-main-horizontal nav-main-hover d-none d-lg-block">
+                <li class="nav-main-item">
+                  <a class="nav-main-link active" href="javascript:void(0)">
+                    <i class="nav-main-link-icon fa fa-home d-none d-xl-inline-block"></i>
+                    <span class="nav-main-link-name">Home</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="javascript:void(0)">
+                    <i class="nav-main-link-icon fa fa-flag d-none d-xl-inline-block"></i>
+                    <span class="nav-main-link-name">Notifications</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="javascript:void(0)">
+                    <i class="nav-main-link-icon fa fa-envelope d-none d-xl-inline-block"></i>
+                    <span class="nav-main-link-name">Messages</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- END Header Navigation -->
+            </div>
+            <div class="col-3 text-center">
+              <!-- Logo -->
+              <a class="link-fx fw-bold" href="index.html">
+                <i class="fa fa-fire text-primary"></i>
+                <span class="d-none d-md-inline-block">
+                  <span class="fs-4 text-dual">code</span><span class="fs-4 text-primary">base</span>
+                </span>
+              </a>
+              <!-- END Logo -->
+            </div>
+            <div class="col text-end">
+              <!-- Open Search Section -->
+              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+              <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="header_search_on">
+                <i class="fa fa-search"></i>
+              </button>
+              <!-- END Open Search Section -->
+
+              <!-- Compose -->
+              <button type="button" class="btn btn-sm btn-alt-success ms-1">
+                <i class="far fa-edit opacity-50"></i>
+                <span class="d-none d-sm-inline">Compose</span>
+              </button>
+              <!-- END Compose -->
+            </div>
+          </div>
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-body-extra-light">
+          <div class="content-header">
+            <form class="w-100" action="db_social.html" method="POST">
+              <div class="input-group">
+                <!-- Close Search Section -->
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times"></i>
+                </button>
+                <!-- END Close Search Section -->
+                <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                <button type="submit" class="btn btn-secondary">
+                  <i class="fa fa-fw fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <div id="page-header-loader" class="overlay-header bg-primary">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="far fa-sun fa-spin text-white"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Page Content -->
+        <div class="content">
+          <div class="row">
+            <!-- User -->
+            <div class="col-lg-4 col-xl-3">
+              <!-- Account -->
+              <div class="block block-rounded text-center fw-semibold">
+                <div class="block-content block-content-full bg-gd-sea">
+                  <img class="img-avatar img-avatar-thumb" src="assets/media/avatars/avatar5.jpg" alt="">
+                </div>
+                <div class="block-content p-3">
+                  <div class="border-bottom pb-3 mb-3">
+                    Andrea Gardner<br>
+                    <a class="fs-sm fw-medium text-muted" href="javascript:void(0)">@andrea</a>
+                  </div>
+                  <div class="row g-sm">
+                    <div class="col-4">
+                      <div class="fs-xs text-muted">Updates</div>
+                      <a class="fs-lg" href="javascript:void(0)">750</a>
+                    </div>
+                    <div class="col-4">
+                      <div class="fs-xs text-muted">Following</div>
+                      <a class="fs-lg" href="javascript:void(0)">230</a>
+                    </div>
+                    <div class="col-4">
+                      <div class="fs-xs text-muted">Followers</div>
+                      <a class="fs-lg" href="javascript:void(0)">1,680</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END Account -->
+
+              <!-- Worldwide Trends -->
+              <div class="block block-rounded">
+                <div class="block-header block-header-default">
+                  <h3 class="block-title fw-semibold">Worldwide Trends</h3>
+                  <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                      <i class="si si-refresh"></i>
+                    </button>
+                    <button type="button" class="btn-block-option">
+                      <i class="si si-wrench"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="block-content p-3">
+                  <a class="fs-sm fw-semibold" href="javascript:void(0)">#laravelnews</a>
+                  <p class="fs-sm fw-medium text-muted">29.3k Updates</p>
+                  <a class="fs-sm fw-semibold" href="javascript:void(0)">#reactjs</a>
+                  <p class="fs-sm fw-medium text-muted">25.8k Updates</p>
+                  <a class="fs-sm fw-semibold" href="javascript:void(0)">#angular</a>
+                  <p class="fs-sm fw-medium text-muted">19.3k Updates</p>
+                  <a class="fs-sm fw-semibold" href="javascript:void(0)">#pcnews</a>
+                  <p class="fs-sm fw-medium text-muted">18.6k Updates</p>
+                  <a class="fs-sm fw-semibold" href="javascript:void(0)">#webdesign2018</a>
+                  <p class="fs-sm fw-medium text-muted mb-0">17.2k Updates</p>
+                </div>
+              </div>
+              <!-- END Worldwide Trends -->
+            </div>
+            <!-- END User -->
+
+            <!-- Updates -->
+            <div class="col-lg-4 col-xl-6">
+              <div class="block block-rounded">
+                <div class="block-content block-content-full bg-body-light">
+                  <form>
+                    <div class="input-group input-group-lg">
+                      <input type="text" class="form-control" placeholder="What’s happening?">
+                      <button type="submit" class="btn btn-primary">
+                        <i class="far fa-edit opacity-50 me-1"></i> Post
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="block-content block-content-full">
+                  <div class="d-flex">
+                    <img class="img-avatar img-avatar48 flex-shrink-0 me-3" src="assets/media/avatars/avatar13.jpg" alt="">
+                    <div class="flex-grow-1">
+                      <p class="mb-1">
+                        <a class="fw-semibold" href="javascript:void(0)">Wayne Garcia</a>
+                        <a class="text-muted" href="javascript:void(0)">@waynegarcia</a>
+                        &bull; 30m
+                      </p>
+                      <p class="fs-sm">
+                        In gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                      </p>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-comment"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="fa fa-fw fa-retweet"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-heart"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-envelope"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-content block-content-full border-top">
+                  <div class="d-flex">
+                    <img class="img-avatar img-avatar48 flex-shrink-0 me-3" src="assets/media/avatars/avatar9.jpg" alt="">
+                    <div class="flex-grow-1">
+                      <p class="mb-1">
+                        <a class="fw-semibold" href="javascript:void(0)">John Smith</a>
+                        <a class="text-muted" href="javascript:void(0)">@j.smith</a>
+                        &bull; 35m
+                      </p>
+                      <p class="fs-sm">
+                        Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                      </p>
+                      <img class="img-fluid push" src="assets/media/photos/photo13.jpg" alt="">
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-comment"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="fa fa-fw fa-retweet"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-heart"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-envelope"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-content block-content-full border-top">
+                  <div class="d-flex">
+                    <img class="img-avatar img-avatar48 flex-shrink-0 me-3" src="assets/media/avatars/avatar10.jpg" alt="">
+                    <div class="flex-grow-1">
+                      <p class="mb-1">
+                        <a class="fw-semibold" href="javascript:void(0)">John Doe</a>
+                        <a class="text-muted" href="javascript:void(0)">@j.doe</a>
+                        &bull; 50m
+                      </p>
+                      <p class="fs-sm">
+                        Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus. Mauris tincidunt tincidunt turpis in porta. Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus.
+                      </p>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-comment"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="fa fa-fw fa-retweet"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-heart"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-envelope"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-content block-content-full border-top">
+                  <div class="d-flex">
+                    <img class="img-avatar img-avatar48 flex-shrink-0 me-3" src="assets/media/avatars/avatar3.jpg" alt="">
+                    <div class="flex-grow-1">
+                      <p class="mb-1">
+                        <a class="fw-semibold" href="javascript:void(0)">Lisa Ray</a>
+                        <a class="text-muted" href="javascript:void(0)">@l.ray</a>
+                        &bull; 3d
+                      </p>
+                      <p class="fs-sm">
+                        Sed tincidunt scelerisque ligula, et facilisis nulla hendrerit non. Suspendisse potenti. Pellentesque non accumsan orci. Praesent at lacinia dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <img class="img-fluid push" src="assets/media/photos/photo3.jpg" alt="">
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-comment"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="fa fa-fw fa-retweet"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-heart"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-envelope"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-content block-content-full border-top">
+                  <div class="d-flex">
+                    <img class="img-avatar img-avatar48 flex-shrink-0 me-3" src="assets/media/avatars/avatar2.jpg" alt="">
+                    <div class="flex-grow-1">
+                      <p class="mb-1">
+                        <a class="fw-semibold" href="javascript:void(0)">Laura Taylor</a>
+                        <a class="text-muted" href="javascript:void(0)">@l.taylor</a>
+                        &bull; 5d
+                      </p>
+                      <p class="fs-sm">
+                        Donec lacinia venenatis metus at bibendum? In hac habitasse platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend. Sed porttitor pretium venenatis. Suspendisse potenti. Aliquam quis ligula elit. Aliquam at orci ac neque semper dictum. Sed tincidunt scelerisque ligula, et facilisis nulla hendrerit non. Suspendisse potenti. Pellentesque non accumsan orci. Praesent at lacinia dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-comment"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="fa fa-fw fa-retweet"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-heart"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill btn-alt-secondary me-2">
+                        <i class="far fa-fw fa-envelope"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END Updates -->
+
+            <!-- Extra -->
+            <div class="col-lg-4 col-xl-3">
+              <!-- Who to follow -->
+              <div class="block block-rounded">
+                <div class="block-header block-header-default">
+                  <h3 class="block-title fw-semibold">Who to Follow</h3>
+                  <div class="block-options">
+                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                      <i class="si si-refresh"></i>
+                    </button>
+                    <button type="button" class="btn-block-option">
+                      <i class="si si-wrench"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="block-content p-2">
+                  <ul class="nav-users">
+                    <li class="fs-sm">
+                      <a href="javascript:void(0)">
+                        <img class="img-avatar" src="assets/media/avatars/avatar5.jpg" alt="">
+                        <i class="fa fa-circle text-success"></i> Helen Jacobs
+                        <div class="fw-medium text-muted">Web Designer</div>
+                      </a>
+                    </li>
+                    <li class="fs-sm">
+                      <a href="javascript:void(0)">
+                        <img class="img-avatar" src="assets/media/avatars/avatar6.jpg" alt="">
+                        <i class="fa fa-circle text-success"></i> Carol Ray
+                        <div class="fw-medium text-muted">Photographer</div>
+                      </a>
+                    </li>
+                    <li class="fs-sm">
+                      <a href="javascript:void(0)">
+                        <img class="img-avatar" src="assets/media/avatars/avatar11.jpg" alt="">
+                        <i class="fa fa-circle text-success"></i> Justin Hunt
+                        <div class="fw-medium text-muted">Copywriter</div>
+                      </a>
+                    </li>
+                    <li class="fs-sm">
+                      <a href="javascript:void(0)">
+                        <img class="img-avatar" src="assets/media/avatars/avatar9.jpg" alt="">
+                        <i class="fa fa-circle text-success"></i> Thomas Riley
+                        <div class="fw-medium text-muted">UI Designer</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="block-content p-3 border-top">
+                  <a class="fs-sm fw-medium" href="javascript:void(0)">
+                    <i class="fa fa-users opacity-50 me-1"></i> Find people you know
+                  </a>
+                </div>
+              </div>
+              <!-- END Who to follow -->
+
+              <!-- About -->
+              <div class="block block-rounded">
+                <div class="block-content p-3 text-muted fs-sm">
+                  &copy; <span data-toggle="year-copy"></span>
+                  <a class="fs-sm fw-medium text-muted ms-1" href="javascript:void(0)">About Us</a>
+                  <a class="fs-sm fw-medium text-muted ms-1" href="javascript:void(0)">Copyright</a>
+                </div>
+                <div class="block-content p-3 border-top">
+                  <a class="fs-sm fw-medium" href="javascript:void(0)">
+                    <i class="fa fa-external-link-square-alt opacity-50 me-1"></i> Advertise with Us
+                  </a>
+                </div>
+              </div>
+              <!-- END About -->
+            </div>
+            <!-- END Extra -->
+          </div>
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer" class="bg-body-extra-light">
+        <div class="content py-3">
+          <div class="row fs-sm">
+            <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/95j" target="_blank">Codebase 5.1</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+        Codebase JS
+
+        Core libraries and functionality
+        webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/codebase.app.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+﻿
+
+@{
+    ViewBag.Title = "Hesap Kapatma";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Page Content -->
+<div class="content">
+    <div class="content-heading d-flex justify-content-between align-items-center">
+        <span>
+            @ViewBag.Title
+        </span>
+        <div class="col-8 col-md-8 col-xl-8 d-flex justify-content-end align-items-center">
+            <button type="button" data-bs-toggle="modal" id="completeOrderBtn" data-bs-target="#modal-normal" class="btn btn-sm btn-primary">Hesap Kapat</button>
+            <div class="col-4 col-md-4 col-xl-4 ms-2">
+                <select class="js-select2 form-select" id="tableSelectList" name="tableSelectList" style="width: 100%;" data-placeholder="Masa Seçiniz...">
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <!-- Dynamic Table Full Pagination -->
+    <div class="block block-rounded">
+        <div class="block-content block-content-full">
+            <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Sipariş Adı</th>
+                        <th>Ürün Adı</th>
+                        <th>Adet</th>
+                        <th>Birim Fiyat</th>
+                        <th>Toplam Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody id="orderDetailTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Dynamic Table Full Pagination -->
+    <!-- Normal Modal -->
+    <div class="modal fade" id="modal-normal" tabindex="-1" role="dialog" aria-labelledby="modal-normal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="block block-rounded shadow-none mb-0">
+                    <div class="block-header block-header-default">
+                        <h3 class="block-title">Ödeme Tipi &amp; İndirim Miktarı</h3>
+                        <div class="block-options">
+                            <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="block-content fs-sm">
+                        <div class="mb-4">
+                            <label class="form-label" for="paymentType">Ödeme Tipi<span class="text-danger">*</span></label>
+                            <select class="form-select" id="paymentType" name="paymentType">
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="discount">İndirim Miktarı <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" value="0" min="0" id="discount" name="discount">
+                        </div>
+                    </div>
+                    <div class="block-content block-content-full block-content-sm text-end border-top">
+                        <button type="button" class="btn btn-alt-secondary" data-bs-dismiss="modal">
+                            Vazgeç!
+                        </button>
+                        <button type="button" id="completeOrder" class="btn btn-alt-primary" data-bs-dismiss="modal">
+                            Tamamla
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Normal Modal -->
+
+</div>
+@section Js{
+    <script src="~/Javascripts/Pages/Order/completeOrder.js"></script>
+}
+

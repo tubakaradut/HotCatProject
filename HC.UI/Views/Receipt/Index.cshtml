@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Fiş Görüntüleme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <!-- Invoice -->
+    <h2 class="content-heading d-print-none d-flex justify-content-between align-items-center">
+        <span>@ViewBag.Title</span>
+    </h2>
+    <div class="block block-rounded">
+        <div class="block-header block-header-default">
+            <h3 class="block-title" id="receiptNumber"></h3>
+            <div class="block-options">
+                <!-- Print Page functionality is initialized in Helpers.cbPrint() -->
+                <button type="button" class="btn-block-option" onclick="Javascript:window.print();">
+                    <i class="si si-printer"></i>
+                </button>
+            </div>
+        </div>
+        <div class="block-content">
+            <!-- Invoice Info -->
+            <div class="row my-3 fs-sm">
+                <!-- Company Info -->
+                <div class="col-sm-6">
+                    <p class="h3" id="companyName"></p>
+                    <address id="address"></address>
+                    <address id="phoneNumber"></address>
+                    <address id="taxNo"></address>
+                </div>
+                <!-- END Company Info -->
+               
+            </div>
+            <!-- END Invoice Info -->
+            <!-- Table -->
+            <div class="table-responsive push">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center" style="width: 60px;">#</th>
+                            <th>Ürün</th>
+                            <th class="text-center" style="width: 90px;">Miktar</th>
+                            <th class="text-end" style="width: 120px;">Birim Fiyat</th>
+                            <th class="text-end" style="width: 120px;">Toplam Fiyat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders">
+                    </tbody>
+                </table>
+            </div>
+            <!-- END Table -->
+            <!-- Footer -->
+            <p class="fa-sm text-muted text-center">
+                Teşekkür Ederiz. Yine Bekleriz ✌ 🤞
+            </p>
+            <!-- END Footer -->
+        </div>
+    </div>
+    <!-- END Invoice -->
+</div>
+@section Js{
+    <script src="~/Javascripts/Pages/Receipt/receipt.js"></script>
+}

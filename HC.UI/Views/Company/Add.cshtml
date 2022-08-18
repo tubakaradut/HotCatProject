@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Şirket Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <form class="js-validation" id="addCompanyForm" method="POST">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">@ViewBag.Title</h3>
+            </div>
+            <div class="block-content block-content-full">
+                <div class="row items-push">
+                    <div class="col-lg-6 col-xl-6 offset-lg-3 offset-xl-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="companyName">Şirket Adı <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="companyName" name="companyName">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="Address">Adres</label>
+                            <textarea class="form-control" id="address" name="Address" rows="5"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="taxNo">Vergi No</label>
+                            <input type="text" class="form-control" id="taxNo" name="taxNo">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="phoneNumber">Telefon Numarası</label>
+                            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit -->
+                <div class="row items-push">
+                    <div class="col-lg-7">
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </div>
+                </div>
+                <!-- END Submit -->
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Js{
+
+    <script src="~/Javascripts/Pages/Company/company.js"></script>
+}
+

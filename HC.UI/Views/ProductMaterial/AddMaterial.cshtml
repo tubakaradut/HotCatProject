@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Ürün ile Malzeme Eşleştirme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Page Content -->
+<div class="content">
+    <form class="js-validation" id="addProductMaterialForm" method="POST">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">@ViewBag.Title</h3>
+            </div>
+            <div class="block-content block-content-full">
+                <div class="row items-push">
+                    <div class="col-lg-6 col-xl-6 offset-lg-3 offset-xl-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="productName">Ürün Adı</label>
+                            <input type="text" disabled class="form-control" id="productName" name="productName">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="materialQuantity">Malzeme Miktarı <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" min="1" id="materialQuantity" name="materialQuantity">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="materialSelectList">Malzeme <span class="text-danger">*</span></label>
+                            <select class="js-select2 form-select" id="materialSelectList" name="materialSelectList" style="width: 100%;" data-placeholder="Malzeme Seçiniz...">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit -->
+                <div class="row items-push">
+                    <div class="col-lg-7">
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </div>
+                </div>
+                <!-- END Submit -->
+            </div>
+        </div>
+    </form>
+    <!-- Dynamic Table Full Pagination -->
+    <div class="block block-rounded" id="tempProductMaterialTableContainer">
+        <div class="block-content block-content-full">
+            <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                <thead>
+                    <tr>
+                        <th>Ürün Adı</th>
+                        <th>Malzeme Adı</th>
+                        <th>Malzeme Miktarı</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody id="tempProductMaterialTableBody">
+                </tbody>
+            </table>
+        </div>
+        <div class="block-content block-content-full block-content-sm bg-body-light fs-sm">
+            <!-- Submit -->
+            <button id="saveProductMaterialList" class="btn btn-primary">Kaydet</button>
+            <!-- END Submit -->
+        </div>
+    </div>
+    <!-- END Dynamic Table Full Pagination -->
+</div>
+@section Js{
+    <script src="~/Javascripts/Pages/ProductMaterial/addMaterial.js"></script>
+}
+

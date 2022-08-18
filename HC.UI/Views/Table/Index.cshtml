@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Masalar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Page Content -->
+<div class="content">
+    <h2 class="content-heading">@ViewBag.Title</h2>
+    <div class="row">
+        <div class="block block-rounded" id="tableContainer">
+            <ul class="nav nav-tabs nav-tabs-alt" id="tableLocations" role="tablist" style="align-items:center">
+            </ul>
+            <div class="block-content tab-content" id="tableLocationsContent">
+            </div>
+        </div>
+    </div>
+</div>
+@section Js{
+    <script src="~/Javascripts/Pages/Table/table.js"></script>
+}

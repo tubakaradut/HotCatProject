@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Ürün Liste";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <!-- Dynamic Table Full Pagination -->
+    <div class="block block-rounded">
+        <div class="block-header block-header-default">
+            <h3 class="block-title">
+                @ViewBag.Title
+            </h3>
+        </div>
+        <div class="block-content block-content-full">
+            <!-- DataTables functionality is initialized with .js-dataTable-full-pagination class in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
+            <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Ürün Adı</th>
+                        <th>Açıklama</th>
+                        <th>Ürün Fiyatı</th>
+                        @*<th>Ürün Resmi</th>*@
+                        <th>Kategorisi</th>
+                        <th>Ürün Stok Miktarı</th>
+                        <th id="process">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Dynamic Table Full Pagination -->
+    <!-- Normal Modal -->
+    <div class="modal fade" id="materialList" tabindex="-1" role="dialog" aria-labelledby="modal-large" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="block block-rounded shadow-none mb-0">
+                    <div class="block-header block-header-default">
+                        <h3 class="block-title">Malzeme Listesi</h3>
+                        <div class="block-options">
+                            <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="block-content fs-sm">
+                        <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                            <thead>
+                                <tr>
+                                    <th>Malzeme Adı</th>
+                                    <th>Birim Tipi</th>
+                                    <th>Son Kullanma Tarihi</th>
+                                    <th>Minimum Stok</th>
+                                    <th>Mevcut Stok</th>
+                                    <th>Maksimum Stok</th>
+                                    <th>Stok Durumu</th>
+                                </tr>
+                            </thead>
+                            <tbody id="materialTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="block-content block-content-full block-content-sm text-end border-top">
+                        <button type="button" class="btn btn-alt-secondary" data-bs-dismiss="modal">
+                            Vazgeç!
+                        </button>
+                        <button type="button" id="requestMaterial" class="btn btn-alt-primary">
+                            Malzeme Talep Et
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Normal Modal -->
+</div>
+@section Js{
+    <script src="~/Javascripts/Pages/Product/product.js"></script>
+}

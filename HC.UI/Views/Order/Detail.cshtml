@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Sipariş Detayları";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Page Content -->
+<div class="content">
+    <div class="content-heading d-flex justify-content-between align-items-center">
+        <span>
+            @ViewBag.Title
+        </span>
+        <div class="col-8 col-md-8 col-xl-8 d-flex justify-content-end align-items-center">
+            <div class="col-4 col-md-4 col-xl-4 me-2">
+                <select class="js-select2 form-select" id="tableSelectList" name="tableSelectList" style="width: 100%;" data-placeholder="Masa Seçiniz...">
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- Dynamic Table Full Pagination -->
+    <div class="block block-rounded">
+        <div class="block-content block-content-full">
+            <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Sipariş Adı</th>
+                        <th>Ürün Adı</th>
+                        <th>Adet</th>
+                        <th>Birim Fiyat</th>
+                        <th>Toplam Fiyat</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody id="orderDetailTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Dynamic Table Full Pagination -->
+</div>
+@section Js{
+    <script src="~/Javascripts/Pages/Order/orderDetail.js"></script>
+}

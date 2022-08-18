@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content">
+    <h2 class="content-heading">@ViewBag.Title</h2>
+    <div class="row">
+        <!-- Row #5 -->
+        <div class="col-md-6 col-xl-4">
+            <a class="block block-rounded block-transparent" id="productReport" href="javascript:void(0)">
+                <div class="block-content block-content-full bg-success">
+                    <div class="py-3 text-center">
+                        <div class="mb-3">
+                            <i class="si si-wallet fa-4x text-warning-light"></i>
+                        </div>
+                        <div class="fs-3 fw-semibold text-white">Ürün Raporları</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-xl-4">
+            <a class="block block-rounded block-transparent" id="orderReport" href="javascript:void(0)">
+                <div class="block-content block-content-full bg-primary">
+                    <div class="py-3 text-center">
+                        <div class="mb-3">
+                            <i class="si si-wallet fa-4x text-white"></i>
+                        </div>
+                        <div class="fs-3 fw-semibold text-white">Satış Raporları</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-xl-4">
+            <a class="block block-rounded block-transparent" id="employeeReport" href="javascript:void(0)">
+                <div class="block-content block-content-full bg-elegance">
+                    <div class="py-3 text-center">
+                        <div class="mb-3">
+                            <i class="si si-book-open fa-4x text-info-light"></i>
+                        </div>
+                        <div class="fs-3 fw-semibold text-white">Çalışan Listesi</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- END Row #5 -->
+    </div>
+</div>
+
+@section Js{
+    <script src="~/Javascripts/Pages/Home/managerDashboard.js"></script>
+}

@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Codebase - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Codebase - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Codebase - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Codebase">
+    <meta property="og:description" content="Codebase - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+
+    <!-- Fonts and Codebase framework -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap">
+    <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+    <link rel="stylesheet" id="css-theme" href="assets/css/themes/earth.min.css">
+    <!-- END Stylesheets -->
+  </head>
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Codebase.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-modern'                        Modern Header style
+        'page-header-dark'                          Dark themed Header (works only with classic Header style)
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'        Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="sidebar-dark side-scroll main-content-boxed">
+
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <!-- Sidebar Content -->
+        <div class="sidebar-content">
+          <!-- Side Header -->
+          <div class="content-header justify-content-lg-center">
+            <!-- Logo -->
+            <div>
+              <span class="smini-visible fw-bold tracking-wide fs-lg">
+                c<span class="text-primary">b</span>
+              </span>
+              <a class="link-fx fw-bold tracking-wide mx-auto" href="index.html">
+                <span class="smini-hidden">
+                  <i class="fa fa-fire text-primary"></i>
+                  <span class="fs-4 text-dual">code</span><span class="fs-4 text-primary">base</span>
+                </span>
+              </a>
+            </div>
+            <!-- END Logo -->
+
+            <!-- Options -->
+            <div>
+              <!-- Close Sidebar, Visible only on mobile screens -->
+              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+              <button type="button" class="btn btn-sm btn-alt-danger d-lg-none" data-toggle="layout" data-action="sidebar_close">
+                <i class="fa fa-fw fa-times"></i>
+              </button>
+              <!-- END Close Sidebar -->
+            </div>
+            <!-- END Options -->
+          </div>
+          <!-- END Side Header -->
+
+          <!-- Sidebar Scrolling -->
+          <div class="js-sidebar-scroll">
+            <!-- Side Main Navigation -->
+            <div class="content-side content-side-full">
+              <!--
+              Mobile navigation, desktop navigation can be found in #page-header
+
+              If you would like to use the same navigation in both mobiles and desktops, you can use exactly the same markup inside sidebar and header navigation ul lists
+              -->
+              <ul class="nav-main">
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-coffee"></i>
+                    <span class="nav-main-link-name">Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-rocket"></i>
+                    <span class="nav-main-link-name">Features</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-wallet"></i>
+                    <span class="nav-main-link-name">Pricing</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-th-large"></i>
+                    <span class="nav-main-link-name">Plan</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-user"></i>
+                    <span class="nav-main-link-name">Account</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="">
+                    <i class="nav-main-link-icon fa fa-lock"></i>
+                    <span class="nav-main-link-name">Logout</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- END Side Main Navigation -->
+          </div>
+          <!-- END Sidebar Scrolling -->
+        </div>
+        <!-- Sidebar Content -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div class="space-x-1">
+            <!-- Logo -->
+            <a class="link-fx fw-bold" href="index.html">
+              <i class="fa fa-fire text-primary"></i>
+              <span class="fs-4 text-dual">code</span><span class="fs-4 text-primary">base</span>
+            </a>
+            <!-- END Logo -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div>
+            <!-- Header Navigation -->
+            <!-- Desktop Navigation, mobile navigation can be found in #sidebar -->
+            <ul class="nav-main nav-main-horizontal nav-main-hover d-none d-lg-block me-1">
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="nav-submenu" href="#">
+                  <i class="nav-main-link-icon fa fa-layer-group"></i>
+                  <span class="nav-main-link-name">Menu</span>
+                </a>
+                <ul class="nav-main-submenu nav-main-submenu-right">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <i class="nav-main-link-icon fa fa-coffee"></i>
+                      <span class="nav-main-link-name">Dashboard</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <i class="nav-main-link-icon fa fa-rocket"></i>
+                      <span class="nav-main-link-name">Features</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <i class="nav-main-link-icon fa fa-wallet"></i>
+                      <span class="nav-main-link-name">Pricing</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <i class="nav-main-link-icon fa fa-th-large"></i>
+                      <span class="nav-main-link-name">Plan</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <i class="nav-main-link-icon fa fa-user"></i>
+                      <span class="nav-main-link-name">Account</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <i class="nav-main-link-icon fa fa-lock"></i>
+                      <span class="nav-main-link-name">Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- END Header Navigation -->
+
+            <!-- Toggle Sidebar -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+              <span>Menu</span>
+              <i class="fa fa-fw fa-bars opacity-50 ms-1"></i>
+            </button>
+            <!-- END Toggle Sidebar -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-body-extra-light">
+          <div class="content-header">
+            <form class="w-100" action="db_minimal.html" method="POST">
+              <div class="input-group">
+                <!-- Close Search Section -->
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times"></i>
+                </button>
+                <!-- END Close Search Section -->
+                <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                <button type="submit" class="btn btn-secondary">
+                  <i class="fa fa-fw fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <div id="page-header-loader" class="overlay-header bg-primary">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="far fa-sun fa-spin text-white"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Header -->
+        <div class="bg-body-extra-light">
+          <div class="content content-full">
+            <div class="pt-5 pb-4 text-center">
+              <h1 class="fw-light mb-2">Dashboard</h1>
+              <h2 class="h4 text-muted fw-light mb-0">Welcome <span class="fw-semibold">Admin</span>, everything looks good.</h2>
+            </div>
+          </div>
+        </div>
+        <!-- END Header -->
+
+        <!-- Page Content -->
+        <div class="content">
+          <!-- Mini Stats -->
+          <div class="row">
+            <div class="col-6 col-xl-3">
+              <a class="block block-rounded" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="fs-2 fw-bold mb-0">869</div>
+                    <div class="fs-sm fw-semibold text-primary-light">Sales</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-xl-3">
+              <a class="block block-rounded" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="fs-2 fw-bold mb-0">$1,360</div>
+                    <div class="fs-sm fw-semibold text-primary-light">Earnings</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-xl-3">
+              <a class="block block-rounded" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="fs-2 fw-bold mb-0">$15,500</div>
+                    <div class="fs-sm fw-semibold text-primary-light">Total</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-xl-3">
+              <a class="block block-rounded" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="fs-2 fw-bold mb-0">$19,600</div>
+                    <div class="fs-sm fw-semibold text-primary-light">Estimated</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- END Mini Stats -->
+
+          <!-- Charts -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="block block-rounded">
+                <div class="block-header">
+                  <h3 class="block-title fw-semibold">Sales</h3>
+                </div>
+                <div class="block-content">
+                  <div class="pull">
+                    <!-- Lines Chart Container functionality is initialized in js/pages/db_minimal.min.js which was auto compiled from _js/pages/db_minimal.js -->
+                    <!-- For more info and examples you can check out http://www.chartjs.org/docs/ -->
+                    <canvas id="js-chartjs-minimal-lines"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="block block-rounded">
+                <div class="block-header">
+                  <h3 class="block-title fw-semibold">Earnings</h3>
+                </div>
+                <div class="block-content">
+                  <div class="pull">
+                    <!-- Lines Chart Container functionality is initialized in js/pages/db_minimal.min.js which was auto compiled from _js/pages/db_minimal.js -->
+                    <!-- For more info and examples you can check out http://www.chartjs.org/docs/ -->
+                    <canvas id="js-chartjs-minimal-lines2"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Charts -->
+
+          <!-- Progress -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="block block-rounded">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="mb-3">
+                      <i class="fa fa-coffee fa-3x"></i>
+                    </div>
+                    <div class="fs-4 fw-semibold">Pro Plan</div>
+                    <div class="text-muted">Active plan.</div>
+                    <div class="pt-3">
+                      <a class="btn btn-alt-primary" href="javascript:void(0)">
+                        <i class="fa fa-arrow-up opacity-50 me-1"></i> Upgrade to VIP
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="block block-rounded">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="mb-3">
+                      <i class="fa fab fa-twitter fa-3x"></i>
+                    </div>
+                    <div class="fs-4 fw-semibold">+107 followers</div>
+                    <div class="text-muted">Awesome!</div>
+                    <div class="pt-3">
+                      <a class="btn btn-alt-primary" href="javascript:void(0)">
+                        <i class="fa fa-link opacity-50 me-1"></i> Check them out
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="block block-rounded">
+                <div class="block-content block-content-full">
+                  <div class="py-3 text-center">
+                    <div class="mb-3">
+                      <i class="fa fa-envelope-open fa-3x"></i>
+                    </div>
+                    <div class="fs-4 fw-semibold">10,000 Subscribers</div>
+                    <div class="text-muted">Keep it up!</div>
+                    <div class="pt-3">
+                      <a class="btn btn-alt-primary" href="javascript:void(0)">
+                        <i class="fa fa-cog opacity-50 me-1"></i> Manage list
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Progress -->
+
+          <!-- More Data -->
+          <div class="row">
+            <div class="col-md-6">
+              <a class="block block-rounded" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <i class="si si-graph fa-2x opacity-25"></i>
+                  <div class="row pt-2 pb-4 text-center">
+                    <div class="col-6 border-end">
+                      <div class="fs-3 fw-semibold">5</div>
+                      <div class="fw-semibold text-primary-light">Plans</div>
+                    </div>
+                    <div class="col-6">
+                      <div class="fs-3 fw-semibold">17,890</div>
+                      <div class="fw-semibold text-primary-light">Subscriptions</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a class="block block-rounded" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="text-end">
+                    <i class="si si-wallet fa-2x opacity-25"></i>
+                  </div>
+                  <div class="row pt-2 pb-4 text-center fw-semibold">
+                    <div class="col-6 border-end">
+                      <div class="fs-3">$1,360</div>
+                      <div class="fs-sm text-primary-light">Today</div>
+                    </div>
+                    <div class="col-6">
+                      <div class="fs-3">$5,680</div>
+                      <div class="fs-sm text-primary-light">Last Week</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- END More Data -->
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer" class="bg-body-extra-light">
+        <div class="content py-3">
+          <div class="row fs-sm">
+            <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/95j" target="_blank">Codebase 5.1</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+        Codebase JS
+
+        Core libraries and functionality
+        webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/codebase.app.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/chart.js/chart.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="assets/js/pages/db_minimal.min.js"></script>
+  </body>
+</html>

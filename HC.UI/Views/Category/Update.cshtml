@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Kategori Güncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <form class="js-validation" id="updateCategoryForm" method="POST">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">@ViewBag.Title</h3>
+            </div>
+            <div class="block-content block-content-full">
+                <div class="row items-push">
+                    <div class="col-lg-6 col-xl-6 offset-lg-3 offset-xl-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="categoryName">Kategori Adı <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="categoryName" name="categoryName">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="categoryDescription">Açıklama</label>
+                            <textarea class="form-control" id="categoryDescription" name="categoryDescription" rows="5"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="categoryParentId">Üst Kategori</label>
+                            <select class="form-select" id="categoryParentId" name="categoryParentId">
+                                <option value="null">Yok</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="isExistSubCategory" name="isExistSubCategory" value="1">
+                                <label class="form-check-label" for="isExistSubCategory">Alt kategori var mı?</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit -->
+                <div class="row items-push">
+                    <div class="col-lg-7">
+                        <button type="submit" class="btn btn-primary">Güncelle</button>
+                    </div>
+                </div>
+                <!-- END Submit -->
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Js{
+    <script src="~/Javascripts/Pages/Category/updateCategory.js"></script>
+}

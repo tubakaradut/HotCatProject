@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Kategori Liste";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <!-- Dynamic Table Full Pagination -->
+    <div class="block block-rounded">
+        <div class="block-header block-header-default">
+            <h3 class="block-title">
+                @ViewBag.Title
+            </h3>
+        </div>
+        <div class="block-content block-content-full">
+            <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Kategori Adı</th>
+                        <th>Açıklama</th>
+                        <th>Üst Kategorisi</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody id="categoryTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Dynamic Table Full Pagination -->
+</div>
+
+@section Js{
+    <script src="~/Javascripts/Pages/Category/category.js"></script>
+}

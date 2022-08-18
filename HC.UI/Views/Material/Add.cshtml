@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Malzeme Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <form class="js-validation" id="addMaterialForm" method="POST">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">@ViewBag.Title</h3>
+            </div>
+            <div class="block-content block-content-full">
+                <div class="row items-push">
+                    <div class="col-lg-6 col-xl-6 offset-lg-3 offset-xl-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="materialName">Malzeme Adı <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="materialName" name="materialName">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="unitTypeId">Birim Tipi <span class="text-danger">*</span></label>
+                            <select class="form-select" id="unitTypeId" name="unitTypeId">
+                                <option value="">-</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="expirationDate">Son Kullanma Tarihi</label>
+                            <input type="text" class="js-flatpickr form-control" id="expirationDate" name="expirationDate" placeholder="Tarih Seçiniz...">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="currentStock">Mevcut Stok Miktarı <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" min="1" id="currentStock" name="currentStock">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="minStock">Minimum Stok Miktarı <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" min="1" id="minStock" name="minStock">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="maxStock">Maksimum Stok Miktarı <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" min="1" id="maxStock" name="maxStock">
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit -->
+                <div class="row items-push">
+                    <div class="col-lg-7">
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </div>
+                </div>
+                <!-- END Submit -->
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Js{
+    <script src="~/Javascripts/Pages/Material/material.js"></script>
+}

@@ -1,0 +1,13 @@
+﻿{
+  "//": ".json dosya uzantıları Json yazmak için kullanılır.Json :programlama dilinden bagımsız olarak farklı platformlar arasında veri alısverisi için kullanılır.Api yazdıgımız projenin yolunu degiskene aktararak diger yerlerde kullanım kolaylıgı saglandı.",
+  "apiUrl": "https://localhost:44361/api/",
+  "userRole": {
+    "Admin": "Admin",
+    "Manager": "Manager",
+    "Waiter": "Waiter",
+    "Cashier": "Cashier",
+    "Boss": "Boss",
+    "Salesman": "Salesman",
+    "Guest": "Guest"
+  }
+}

@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Masa Liste";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content">
+    <!-- Dynamic Table Full Pagination -->
+    <div class="block block-rounded">
+        <div class="block-header block-header-default">
+            <h3 class="block-title">
+                Masa Listesi
+            </h3>
+        </div>
+        <div class="block-content block-content-full">
+            <!-- DataTables functionality is initialized with .js-dataTable-full-pagination class in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
+            <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Masa Adı</th>
+                        <th>Lokasyonu</th>
+                        <th>Kapasitesi</th>
+                        <th>Durumu</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody id="cafeTableBody">
+                    @*<tr>
+                            <td class="text-center">1</td>
+                            <td class="fw-semibold">Lori Grant</td>
+                            <td class="d-none d-sm-table-cell">customer1@example.com</td>
+                            <td class="text-center">
+                                <button type="button" id="categoryUpdate" class="btn btn-sm btn-alt-warning" data-bs-toggle="tooltip" onclick="categoryUpdate()" title="Düzenle">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                                <button type="button" id="categoryDelete" class="btn btn-sm btn-danger" data-bs-toggle="tooltip" title="Sil">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>*@
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Dynamic Table Full Pagination -->
+</div>
+
+<script src="~/Javascripts/Pages/CafeTable/cafeTable.js"></script>

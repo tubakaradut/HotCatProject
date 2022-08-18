@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Masa Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <form class="js-validation" id="addCafeTableForm" method="POST">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">@ViewBag.Title</h3>
+            </div>
+            <div class="block-content block-content-full">
+                <div class="row items-push">
+                    <div class="col-lg-6 col-xl-6 offset-lg-3 offset-xl-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="cafeTableName">Masa Adı <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="cafeTableName" name="cafeTableName">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label" for="capacity">Kapasite<span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" min="1" id="capacity" name="capacity">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="tableLocation">Lokasyonu</label>
+                            <select class="form-select" id="tableLocation" name="tableLocation">
+                                <option value="">-</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="tableStatus">Durumu</label>
+                            <select class="form-select" id="tableStatus" name="tableStatus">
+                                <option value="">-</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Submit -->
+                <div class="row items-push">
+                    <div class="col-lg-7">
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </div>
+                </div>
+                <!-- END Submit -->
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Js{
+
+    <script src="~/Javascripts/Pages/CafeTable/cafeTable.js"></script>
+}

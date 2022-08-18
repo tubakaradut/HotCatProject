@@ -1,0 +1,11 @@
+API katmanındaki controllerdeki action içindeki diğer crud işlemlerine include uygulanacak.
+Kulllanıcıdan alınan password için UTILS katmanında olusturulan cryptograph classı kullanıp sifre kriptolanacak.
+Employee controllerde simdilik mail aktivasyonu yorum satırına alındı.Sunumdan sonra düzenlenecek aktivasyon isleminden yapıldıktan sonra kullanıcının isactive true yapılacak.
+Employee controllerde createpassword ve forgotpassword actionları yazılıp UI da sayfaları olusturulacak.
+Order controllerde yazılan actionlar cok uzun ve karısık oldugu için tekrar revize edilip  ayrı ayrı action veya methodlar yazılarak sadelestirelecek.
+UI katmanında ürün görselleri yapılacak.
+Controllerde repositoryler sürekli new'lendigi için baska bir yöntemi varsa o arastırılıp uygulanacak.
+Employee'ye ilk veri eklenirken appuser olusturulmadıgı zaman sonradan appuser olusturlması için action yazılıp UI'da sayfası olusturulacak.
+Employee ve AppUser iliskilendirme sayfası olusturulacak.
+Material le product eslestimesi yapılırken kullanılan malzeme ölçümleri(limonataya yarım kilo limon konur seklinde) tekrar ayarlanacak.
+Sayfalar ile kullanıcılar eslestirilecek.

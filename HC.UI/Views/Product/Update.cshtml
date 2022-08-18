@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Ürün Güncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <form class="js-validation" id="updateProductForm" method="POST">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">@ViewBag.Title</h3>
+            </div>
+            <div class="block-content block-content-full">
+                <div class="row items-push">
+                    <div class="col-lg-6 col-xl-6 offset-lg-3 offset-xl-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="productName">Ürün Adı <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="productName" name="productName">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="productDescription">Açıklama</label>
+                            <textarea class="form-control" id="productDescription" name="productDescription" rows="5"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="productUnitPrice">Ürün Fiyatı <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" min="1" id="productUnitPrice" name="productUnitPrice">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="productCategory">Kategorisi</label>
+                            <select class="form-select" id="productCategory" name="productCategory">
+                                <option value="">-</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Submit -->
+                <div class="row items-push">
+                    <div class="col-lg-7">
+                        <button type="submit" class="btn btn-primary">Güncelle</button>
+                    </div>
+                </div>
+                <!-- END Submit -->
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Js{
+
+    <script src="~/Javascripts/Pages/Product/updateProduct.js"></script>
+}

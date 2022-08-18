@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Siparişler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Page Content -->
+<div class="content">
+    <div class="content-heading d-flex justify-content-between align-items-center">
+        <span>
+            @ViewBag.Title
+            <small style="color:#FF0000;font-size:13px" id="orderTitleDescription"></small>
+        </span>
+        <div class="col-8 col-md-8 col-xl-8 d-flex justify-content-end align-items-center">
+            <div class="col-4 col-md-4 col-xl-4 me-2">
+                <select class="js-select2 form-select" id="tableSelectList" name="tableSelectList" style="width: 100%;" data-placeholder="Masa Seçiniz...">
+                </select>
+            </div>
+            <div class="col-2 col-md-2 col-xl-2 text-center d-none" id="orderContainer">
+                <button type="button" id="order" style="border:none" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="mb-1"><i class="si si-book-open fa-2x text-info"></i></div>
+                    <div class="fs-sm text-muted" id="orderInfoText"></div>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="orderDetail">
+                    <div class="px-2 py-3 bg-body-light rounded-top">
+                        <h5 class="h6 text-center mb-0">
+                            Sipariş Detayı
+                        </h5>
+                    </div>
+                    <ul class="nav-items my-2 fs-sm" id="productsToOrder">
+                       
+                    </ul>
+                    <div class="p-2 bg-body-light rounded-bottom">
+                        <a class="dropdown-item text-center mb-0" id="saveOrder" href="javascript:void(0)">
+                            <i class="fa fa-fw fa-check opacity-50 me-1"></i> Siparişi Kaydet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="block block-rounded" id="categoryContainer">
+            <ul class="nav nav-tabs nav-tabs-alt" id="category" role="tablist" style="align-items:center">
+            </ul>
+            <div class="block-content tab-content" id="categoryContent">
+            </div>
+        </div>
+    </div>
+</div>
+@section Js{
+    <script src="~/Javascripts/Pages/Order/order.js"></script>
+}
